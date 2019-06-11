@@ -4,14 +4,11 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service
-@Qualifier("DefaultGreetingService")
-public class GreetingServiceImpl implements GreetingService {
-    public static final String HELLO_GURUS = "Hello Gurus!!!!";
-
+@Qualifier("SetterGreetingService")
+public class SetterGreetingService implements GreetingService {
 
     @Override
     public String sayGreeting() {
-        return HELLO_GURUS;
+        return "Hello - I was injected by the setter";
     }
 }
-
